@@ -1,0 +1,111 @@
+Project Aim
+The aim of this project is to develop a "Food Ordering Mobile Application (FOODSPOT)" using MIT App Inventor.
+The application allows users to register and log in, browse different food categories such as Veg, Coffee, and Desserts, select food items, add them to a cart, view item details and price, and place an order using Cash on Delivery (COD). The app provides a simple and user-friendly interface for ordering food and generates a final confirmation screen after placing the order.
+
+Technical Algorithms (Screen-by-Screen)
+Screen 1: Login Screen
+
+Algorithm:
+User enters Email and Password.
+When Login button is clicked:
+Check if EmailTextBox.Text = "" OR PasswordTextBox.Text = "".
+If empty → show message "Enter Email & Password".
+Else → open Home Screen.
+
+Screen 2: Signup Screen
+
+Algorithm:
+User enters Email and Password.
+When Register button is clicked:
+Check if EmailTextBox.Text = "" OR PasswordTextBox.Text = "".
+If empty → show message "Enter Email & Password".
+Else → open Home Screen.
+(Optional) Data can be stored using TinyDB.
+
+Screen 3: Home Screen (Dashboard)
+
+Algorithm:
+Display three main categories:
+Veg 
+Coffee 
+Desserts 
+Wait for user selection.
+On button click:
+If Veg clicked → open Veg Screen.
+If Coffee clicked → open Coffee Screen.
+If Desserts clicked → open Desserts Screen.
+
+Screen 4: Veg Items Screen
+
+Algorithm:
+Display Veg food items with:
+Item Name
+Price (Label, not editable)
+Add to Cart button
+When "Add to Cart" is clicked:
+Store item name and price using TinyDB or StartValue.
+Open Cart Screen.
+
+Screen 5: Coffee Items Screen
+
+Algorithm:
+Display coffee items with name and price.
+Provide Add to Cart button.
+On click:
+Store selected item details.
+Open Cart Screen.
+
+Screen 6: Desserts Items Screen
+
+Algorithm:
+Display dessert items with name and price.
+Provide Add to Cart button.
+On click:
+Store item details.
+Open Cart Screen.
+
+Screen 7: Cart Screen
+
+Algorithm:
+On screen initialize:
+Fetch selected item using TinyDB or StartValue.
+Display:
+Item Name
+Price
+Show total amount.
+Provide Checkout button.
+On Checkout click:
+Open Payment Screen with item details.
+
+Screen 8: Payment Screen
+
+Algorithm:
+On initialize:
+Display selected item and price.
+Show payment option:
+Cash on Delivery (COD)
+When COD button clicked:
+Show message "COD Selected".
+On "Place Order" button click:
+Open Success Screen.
+
+Screen 9: Order Confirmation (Success Screen)
+
+Algorithm:
+Display message:
+"Order Confirmed"
+"Your order will arrive in 10 minutes 🚚"
+Provide button:
+Back to Home
+On click:
+Open Home Screen.
+
+Screen 10: Navigation / Flow Control
+
+Algorithm:
+Maintain smooth navigation between all screens.
+Use:
+open another screen
+open another screen with start value
+Ensure data (item name & price) flows from:
+Item Screen → Cart → Payment → Success.
